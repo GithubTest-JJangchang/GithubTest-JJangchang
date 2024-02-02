@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko" 
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{layouts/layout}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div layout:fragment="content" class="content content2">
+		<h1>상품 데이터 출력</h1>
+		
+		상품명 : <span th:text="${itemDto.itemNm}"></span> <br />
+		상품 설명 : <span th:text="${itemDto.itemDetail}"></span> <br />
+		상품 판매상태 : <span th:text="${itemDto.sellStateCd}"></span> <br />
+		상품 코드 : <span th:text="${itemDto.id}"></span> <br />
+		상품 가격 : <span th:text="${itemDto.price}"></span> <br />
+		상품 등록날짜 : <span th:text="${itemDto.regTime}"></span> <br />
+		상품 수정날짜 : <span th:text="${itemDto.updateTime}"></span> <br />
+		
+	</div>
+</body>
+</html>
